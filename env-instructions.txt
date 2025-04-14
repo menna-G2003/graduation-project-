@@ -1,0 +1,59 @@
+# Real Estate Listings API - Environment Variables
+
+## Basic Configuration
+APP_NAME="Real Estate Listings"
+APP_ENV=local
+APP_KEY=base64:oaILkJktlXzWkrMRXK2ONqsFY1YuMBfzdHs/aahT+Gg=
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+
+## Database Configuration
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=real_estate
+DB_USERNAME=root
+DB_PASSWORD=
+
+## Mail Configuration
+MAIL_MAILER=smtp
+MAIL_HOST=mailpit
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
+## Social Login Configuration
+# Get these values from Google Developer Console
+GOOGLE_CLIENT_ID=your-client-id
+GOOGLE_CLIENT_SECRET=your-client-secret
+GOOGLE_REDIRECT_URI=http://localhost:8000/api/login/google/callback
+
+# Get these values from Facebook Developer Portal
+FACEBOOK_CLIENT_ID=your-app-id
+FACEBOOK_CLIENT_SECRET=your-app-secret
+FACEBOOK_REDIRECT_URI=http://localhost:8000/api/login/facebook/callback
+
+## Payment Configuration
+# Get these values from Stripe Dashboard
+STRIPE_KEY=your-publishable-key
+STRIPE_SECRET=your-secret-key
+
+## How to set up social login:
+# 1. Google: Go to https://console.developers.google.com/
+#    - Create a new project
+#    - Set up OAuth consent screen
+#    - Create OAuth client ID (Web application)
+#    - Add authorized redirect URIs: http://localhost:8000/api/login/google/callback
+
+# 2. Facebook: Go to https://developers.facebook.com/
+#    - Create a new app
+#    - Set up Facebook Login product
+#    - Add OAuth redirect URI: http://localhost:8000/api/login/facebook/callback
+
+## How to set up Stripe:
+# 1. Create an account at https://stripe.com/
+# 2. Get your API keys from the Dashboard
+# 3. For testing, use the test API keys 
